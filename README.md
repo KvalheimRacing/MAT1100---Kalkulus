@@ -4,6 +4,8 @@
 
  Samlingen er tiltenkt for å hjelpe studenter med å spare tid/få oversikt over tidligere plenumsregninger og oppgaver som er regnet i kurset.
 
+ Det ligger også en mappe med samling av alle eksamener (som er tilgjengelig) med løsningsforslag siden 2003.
+
  Man kan finne de orginale filene [her](http://www.uio.no/studier/emner/matnat/math/MAT1100/).
  ___
 
