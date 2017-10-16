@@ -12,6 +12,6 @@
 Man kan finne de orginale filene [her](http://www.uio.no/studier/emner/matnat/math/MAT1100/).
  ___
 
- *Tags; Løsningsforslag Kalkulus, Løsninger MAT1100 Kalkulus, Samling av løsninger i MAT1100 Kalkulus, Solutions MAT1100 Kalkulus.*
+ *Tags; Løsningsforslag Kalkulus, Løsninger MAT1100 Kalkulus, Samling av løsninger i MAT1100 Kalkulus, Øvingsoppgaver MAT1100 Kalkulus.*
 
  -Eirik Kvalheim
