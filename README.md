@@ -5,8 +5,8 @@
  Samlingen er tiltenkt for å hjelpe studenter med å spare tid/få oversikt over tidligere plenumsregninger og oppgaver som er regnet i kurset.
 
  Annet relevant innhold;
- - En samling av alle eksamener (som er tilgjengelig) med løsningsforslag siden 2003.
- - Alle obliger med løsningsforslag som er gitt siden rundt 2003 (ikke alle løsningsforslag er lagt ut).
+ - En samling av alle (tilgjengelige) eksamener med løsningsforslag siden 2003.
+ - Alle obliger med løsningsforslag som er gitt siden rundt 2003.
  - Pensumboken "Flervariabel analyse med lineær algebra" ligger i mappen FVLA.
 
 Man kan finne de orginale filene [her](http://www.uio.no/studier/emner/matnat/math/MAT1100/).
