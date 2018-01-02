@@ -1,1 +1,1 @@
-![](https://media.giphy.com/media/9Af093GLwlBNm/giphy.gif)
+![](https://github.com/KvalheimRacing/MAT1100---Kalkulus/tree/master/img/calculus.gif)
