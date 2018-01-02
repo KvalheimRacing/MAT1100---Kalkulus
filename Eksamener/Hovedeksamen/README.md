@@ -1,1 +1,1 @@
-![](https://github.com/KvalheimRacing/MAT1100---Kalkulus/tree/master/img/gandalv.gif)
+![](https://github.com/KvalheimRacing/MAT1100---Kalkulus/blob/master/img/gandalv.gif)
