@@ -19,4 +19,4 @@ Man kan finne de orginale filene [her](http://www.uio.no/studier/emner/matnat/ma
 
  *Tags; Løsningsforslag Kalkulus, Løsninger MAT1100 Kalkulus, Samling av løsninger i MAT1100 Kalkulus, Øvingsoppgaver MAT1100 Kalkulus.*
 
- -Eirik Kvalheim
+ -[Eirik Kvalheim](https://www.linkedin.com/in/eirik-kvalheim-12157558/)
