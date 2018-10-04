@@ -1,0 +1,233 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{titling}
+\setlength{\droptitle}{-5em} 
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Faztorization of second degree polynomials}
+
+\author{Eirik Kvalheim}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Short explanation of a fast method for finding roots of 2nd degree polynomials
+\end{abstract}
+
+\section{Method for finding real roots}
+\label{sec:introduction}
+
+Let $a$, $b$, $c$, $d$, $e$ $\in$ $\Re$.\\
+Then the 2nd. degree polynomial
+
+\begin{equation}  \label{eq:pol}
+	ax^2 + bx + c = 0
+\end{equation}
+
+have the solutions
+
+\begin{equation} \label{eq:2nd}
+	\begin{array}
+		{*{20}c} {x = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}} \\ 
+	\end{array}
+\end{equation}
+
+%so
+%\begin{equation} \label{eq:2nd}
+%	(x = \pm  e) \wedge (x = \pm  d)
+%\end{equation}
+
+thus we can factorize (\ref{eq:pol}) as
+
+\begin{equation} \label{eq:fac}
+ (x\pm d)(x\pm e) = 0
+\end{equation}
+
+where $d$ and $e$ are the solution to the right hand side of equation \ref{eq:2nd} (assuming (\ref{eq:pol}) has real roots).\\ \newline Solving
+(\ref{eq:2nd}) by hand often takes time and is in most cases when the roots are real, not necessary.\\
+Instead we can use the following logical deductions:\\
+
+Start by making sure the coefficient in front of $x^2$ is one
+
+\begin{equation}  \label{eq:facto}
+	a(x^2 + \frac{b}{a}x + \frac{c}{a}) = 0
+\end{equation}
+
+So
+
+\begin{equation}  \label{eq:factor}
+	a = 0 \vee (x^2 + \frac{b}{a}x + \frac{c}{a}) = 0
+\end{equation}
+
+In most cases $a=1$, and we get
+
+\begin{equation}  \label{eq:poly}
+	x^2 + bx + c = 0
+\end{equation}
+
+Thus we can ask ourself the question\\ \newline \emph{\textbf{"What can you multiply in order to get c, and simultaneously add together to get b?"}}\\
+
+It's important to note that the numbers searched for in this question should be put into (\ref{eq:fac}) and are \textbf{not} the roots.
+
+
+\newpage
+
+\subsection{Examples}
+
+\begin{equation}  \label{eq:ex1}
+	x^2 + 6x + 8 = 0
+\end{equation}
+
+We start by looking for two numbers to multiply in order to get $c=8$.\\ +4 and +2 are good candidates, and if we add them together we get $b=6$.\\ Thus
+
+\begin{equation} \label{eq:ex11}
+ (x+4)(x+2) = 0
+\end{equation}
+
+And finding the roots are trivial.\\ \\
+Now let
+
+\begin{equation}  \label{eq:ex2}
+	x^2 + 4x - 5  = 0
+\end{equation}
+
+The first candidates that may come easily to mind for finding $c$ are $-1*+5$ and $1*-5$.\\ Adding +5 together with -1 gives $b=4$. \\ Thus
+\begin{equation} \label{eq:ex21}
+ (x+5)(x-1) = 0
+\end{equation}
+
+And finding the roots are trivial.\\ \\
+Additionally we can look at
+
+\begin{equation}  \label{eq:ex3}
+	x^2 - 9x + 20 = 0
+\end{equation}
+
+Here we can help ourself by factorizing $c$ which is our first target.\\ 20 = 2*2*5. We need to add some of the factors together to get a negative $b$, so we se that -4 and -5 gives $b=-9$.\\ Thus
+\begin{equation} \label{eq:ex31}
+ (x-5)(x-4) = 0
+\end{equation}
+
+And finding the roots are trivial.\\ \\
+Going further, we have
+
+\begin{equation}  \label{eq:ex4}
+	x^2 - 20x - 69 = 0
+\end{equation}
+
+Using our technique from (\ref{eq:ex3}) we get $c=-2*2*5*3+3*3 = 3*(20+3)$.\\ We see that -23 and +3 gives $b=-20$.\\ 
+Thus
+\begin{equation} \label{eq:ex41}
+ (x+3)(x-23) = 0
+\end{equation}
+
+And finding the roots are trivial.\\ \\
+Finally, let
+
+\begin{equation}  \label{eq:ex5}
+	x^2 - \frac{1}{2}x - \frac{1}{2} = 0
+\end{equation}
+
+Using our technique from (\ref{eq:ex2}) we get $c=1*- \frac{1}{2}$ or $c= -1*\frac{1}{2}$.\\ We see that -1 added with $\frac{1}{2}$ gives $b=-\frac{1}{2}$.\\ 
+Thus
+\begin{equation} \label{eq:ex51}
+ (x-1)(x+\frac{1}{2}) = 0
+\end{equation}
+And finding the roots are trivial.
+
+\newpage
+
+\subsection{Exercises}
+
+Remember that in the cases where $a \neq 1$, the question regards \emph{what we can multiply in order to get $\frac{c}{a}$ and simultaneously add together to get $\frac{b}{a}$}.
+\\Additional interesting problems are given below
+
+\begin{equation}
+	x^2 - 4 = 0
+\end{equation}
+
+\begin{equation}
+	x^2 - 57x = 0
+\end{equation}
+
+\begin{equation}
+	x^2 - 15x +26 = 0
+\end{equation}
+
+\begin{equation}
+	x^2 + 14x +45 = 0
+\end{equation}
+
+\begin{equation}
+	x^2 + 10x -24 = 0
+\end{equation}
+
+\begin{equation}
+	x^2 - 13x +12 = 0
+\end{equation}
+
+\begin{equation}
+	x^2 + 3x -70 = 0
+\end{equation}
+
+\begin{equation}
+	x^2 -12x +35 = 0
+\end{equation}
+
+\begin{equation}
+	2x^2 -x -21 = 0
+\end{equation}
+
+\begin{equation}  \label{eq:ex5}
+	3x^2 + 2x + \frac{1}{3} = 0
+\end{equation}
+
+\begin{equation}
+	2x^2 -8x -24 = 0
+\end{equation}
+
+\begin{equation}
+	3x^2 -11x -4 = 0
+\end{equation}
+
+\begin{equation}
+	3x^2 -14x +5 = 0
+\end{equation}
+
+\begin{equation}
+	8x^2 +14x -15 = 0
+\end{equation}
+
+\begin{equation}
+	5x^2 -34x +24 = 0
+\end{equation}
+
+\begin{equation}
+	8x^2 -47x -63 = 0
+\end{equation}
+
+\begin{equation}
+	6x^2 +11x -35 = 0
+\end{equation}
+
+\begin{equation}
+	11x^2 +18x -7 = 0
+\end{equation}
+
+
+%\begin{thebibliography}{9}
+%\bibitem{nano3}
+% Eirik Kvalheim,
+%  \emph{Robotikk Anvendelser}.
+% Universitetet i Oslo \& Kuben Yrkesarena
+%
+%\end{thebibliography}
+
+\end{document}
