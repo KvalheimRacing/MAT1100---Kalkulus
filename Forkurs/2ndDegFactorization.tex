@@ -7,12 +7,15 @@
 \usepackage{titling}
 \setlength{\droptitle}{-5em} 
 \usepackage[colorinlistoftodos]{todonotes}
+\usepackage{amssymb}
+
+\newcommand{\R}{\mathbb{R}}
 
 \title{Faztorization of second degree polynomials}
 
 \author{Eirik Kvalheim}
 
-\date{\today}
+\date{October 4, 2018}
 
 \begin{document}
 \maketitle
@@ -24,7 +27,7 @@ Short explanation of a fast method for finding roots of 2nd degree polynomials
 \section{Method for finding real roots}
 \label{sec:introduction}
 
-Let $a$, $b$, $c$, $d$, $e$ $\in$ $\Re$.\\
+Let $a$, $b$, $c$, $d$, $e$ $\in$ $\R$\\
 Then the 2nd. degree polynomial
 
 \begin{equation}  \label{eq:pol}
@@ -39,19 +42,20 @@ have the solutions
 	\end{array}
 \end{equation}
 
-%so
-%\begin{equation} \label{eq:2nd}
-%	(x = \pm  e) \wedge (x = \pm  d)
-%\end{equation}
-
 thus we can factorize (\ref{eq:pol}) as
 
 \begin{equation} \label{eq:fac}
- (x\pm d)(x\pm e) = 0
+ (x-d)(x-e) = 0
+\end{equation}
+
+Since
+\begin{equation} \label{eq:Chr}
+	 (x-d)(x-e)=x^2-(d+e)x+de
+	%(x = \pm  e) \wedge (x = \pm  d)
 \end{equation}
 
 where $d$ and $e$ are the solution to the right hand side of equation \ref{eq:2nd} (assuming (\ref{eq:pol}) has real roots).\\ \newline Solving
-(\ref{eq:2nd}) by hand often takes time and is in most cases when the roots are real, not necessary.\\
+(\ref{eq:2nd}) by hand often takes time and are in most cases when the roots are real, not necessary.\\
 Instead we can use the following logical deductions:\\
 
 Start by making sure the coefficient in front of $x^2$ is one
@@ -75,6 +79,8 @@ In most cases $a=1$, and we get
 Thus we can ask ourself the question\\ \newline \emph{\textbf{"What can you multiply in order to get c, and simultaneously add together to get b?"}}\\
 
 It's important to note that the numbers searched for in this question should be put into (\ref{eq:fac}) and are \textbf{not} the roots.
+
+
 
 
 \newpage
@@ -122,7 +128,7 @@ Going further, we have
 	x^2 - 20x - 69 = 0
 \end{equation}
 
-Using our technique from (\ref{eq:ex3}) we get $c=-2*2*5*3+3*3 = 3*(20+3)$.\\ We see that -23 and +3 gives $b=-20$.\\ 
+Using our technique from (\ref{eq:ex3}) we get $c=-2*2*5*3+3*3 = -3*(20+3)$.\\ We see that -23 and +3 gives $b=-20$.\\ 
 Thus
 \begin{equation} \label{eq:ex41}
  (x+3)(x-23) = 0
