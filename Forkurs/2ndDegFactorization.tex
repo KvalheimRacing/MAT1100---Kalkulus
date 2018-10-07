@@ -5,13 +5,13 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{titling}
-\setlength{\droptitle}{-5em} 
+\setlength{\droptitle}{-6em} 
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{amssymb}
 
 \newcommand{\R}{\mathbb{R}}
 
-\title{Faztorization of second degree polynomials}
+\title{Factorization of second degree polynomials}
 
 \author{Eirik Kvalheim}
 
@@ -21,20 +21,20 @@
 \maketitle
 
 \begin{abstract}
-Short explanation of a fast method for finding roots of 2nd degree polynomials
+This document contains a short explanation of a fast method for finding roots of second degree polynomials.
 \end{abstract}
 
 \section{Method for finding real roots}
 \label{sec:introduction}
 
-Let $a$, $b$, $c$, $d$, $e$ $\in$ $\R$\\
-Then the 2nd. degree polynomial
+Let $a$, $b$, $c$, $d$, $e$ $\in$ $\R$.\\
+Then the second degree polynomial equation
 
 \begin{equation}  \label{eq:pol}
 	ax^2 + bx + c = 0
 \end{equation}
 
-have the solutions
+has the solutions
 
 \begin{equation} \label{eq:2nd}
 	\begin{array}
@@ -48,112 +48,137 @@ thus we can factorize (\ref{eq:pol}) as
  (x-d)(x-e) = 0
 \end{equation}
 
-Since
+since
 \begin{equation} \label{eq:Chr}
 	 (x-d)(x-e)=x^2-(d+e)x+de
 	%(x = \pm  e) \wedge (x = \pm  d)
 \end{equation}
 
-where $d$ and $e$ are the solution to the right hand side of equation \ref{eq:2nd} (assuming (\ref{eq:pol}) has real roots).\\ \newline Solving
-(\ref{eq:2nd}) by hand often takes time and are in most cases when the roots are real, not necessary.\\
-Instead we can use the following logical deductions:\\
+where $d$ and $e$ are the solutions to the right hand side of equation \ref{eq:2nd} (assuming (\ref{eq:pol}) has real roots).\\ \newline Simplifying
+(\ref{eq:2nd}) by hand often takes time and is in most cases not necessary when the roots are real.
+Instead we can use the following logical deductions.\\
 
-Start by making sure the coefficient in front of $x^2$ is one
+Start by making sure the coefficient in front of $x^2$ is one:
 
-\begin{equation}  \label{eq:facto}
-	a(x^2 + \frac{b}{a}x + \frac{c}{a}) = 0
-\end{equation}
+%\begin{equation}  \label{eq:facto}
+	\begin{align}
+		a\Bigl( x^2 + \frac{b}{a}x + \frac{c}{a} \Bigr) = 0,
+	\end{align}
+%\end{equation}
 
-So
+so
 
-\begin{equation}  \label{eq:factor}
-	a = 0 \vee (x^2 + \frac{b}{a}x + \frac{c}{a}) = 0
-\end{equation}
+%\begin{equation}  
+	\begin{align} \label{eq:factor}
+  		a = 0 \vee \Bigl( x^2 + \frac{b}{a}x + \frac{c}{a} \Bigr) = 0.
+	\end{align}	
+%\end{equation}
 
 In most cases $a=1$, and we get
 
-\begin{equation}  \label{eq:poly}
-	x^2 + bx + c = 0
-\end{equation}
+%\begin{equation}  \label{eq:poly}
+	\begin{align}
+		x^2 + bx + c = 0
+	\end{align}
+%\end{equation}
 
-Thus we can ask ourself the question\\ \newline \emph{\textbf{"What can you multiply in order to get c, and simultaneously add together to get b?"}}\\
+thus we can ask ourselves the question:\\ \newline \emph{\textbf{"What can one multiply in order to get c, and simultaneously add together to get b?"}}\\
 
-It's important to note that the numbers searched for in this question should be put into (\ref{eq:fac}) and are \textbf{not} the roots.
+It is important to note that the numbers searched for in this question should be put into (\ref{eq:fac}) and are \textbf{not} the roots.
 
 
 
 
 \newpage
 
+\vspace*{-30mm}
+
 \subsection{Examples}
+Consider the equation
 
 \begin{equation}  \label{eq:ex1}
-	x^2 + 6x + 8 = 0
+	x^2 + 6x + 8 = 0.
 \end{equation}
 
-We start by looking for two numbers to multiply in order to get $c=8$.\\ +4 and +2 are good candidates, and if we add them together we get $b=6$.\\ Thus
+We start by looking for two numbers to multiply in order to get $c=8$.
+
++4 and +2 are good candidates, and if we add them together we get $b=6$.
+
+Thus
 
 \begin{equation} \label{eq:ex11}
- (x+4)(x+2) = 0
+ (x+4)(x+2) = 0,
 \end{equation}
-
-And finding the roots are trivial.\\ \\
+and finding the roots is trivial.\\ \\
 Now let
 
 \begin{equation}  \label{eq:ex2}
-	x^2 + 4x - 5  = 0
+	x^2 + 4x - 5  = 0.
 \end{equation}
 
-The first candidates that may come easily to mind for finding $c$ are $-1*+5$ and $1*-5$.\\ Adding +5 together with -1 gives $b=4$. \\ Thus
+The first candidates that may come easily to mind for $c$ are $-1\cdot5$ and $1\cdot-5$.
+
+Adding $+5$ together with $-1$ gives $b=4$.
+
+Thus
 \begin{equation} \label{eq:ex21}
- (x+5)(x-1) = 0
+ (x+5)(x-1) = 0,
 \end{equation}
-
-And finding the roots are trivial.\\ \\
+and finding the roots is trivial.\\ \\
 Additionally we can look at
 
 \begin{equation}  \label{eq:ex3}
-	x^2 - 9x + 20 = 0
+	x^2 - 9x + 20 = 0.
 \end{equation}
 
-Here we can help ourself by factorizing $c$ which is our first target.\\ 20 = 2*2*5. We need to add some of the factors together to get a negative $b$, so we se that -4 and -5 gives $b=-9$.\\ Thus
+Here we can help ourself by factorizing $c$, which is our first target. 
+
+$20=2\cdot2\cdot5$. We need to add some of the factors together to get a negative 
+
+$b$, and we se that $-4$ and $-5$ gives $b=-9$.
+
+Thus
 \begin{equation} \label{eq:ex31}
- (x-5)(x-4) = 0
+ (x-5)(x-4) = 0,
 \end{equation}
-
-And finding the roots are trivial.\\ \\
+and finding the roots is trivial.\\ \\
 Going further, we have
 
 \begin{equation}  \label{eq:ex4}
-	x^2 - 20x - 69 = 0
+	x^2 - 20x - 69 = 0.
 \end{equation}
 
-Using our technique from (\ref{eq:ex3}) we get $c=-2*2*5*3+3*3 = -3*(20+3)$.\\ We see that -23 and +3 gives $b=-20$.\\ 
+Using our technique from (\ref{eq:ex3}) we get $c=-2\cdot2\cdot5\cdot3+3\cdot3 = -3\cdot(20+3)$.
+
+We see that $-23$ and $+3$ gives $b=-20$.
+
 Thus
 \begin{equation} \label{eq:ex41}
- (x+3)(x-23) = 0
+ (x+3)(x-23) = 0,
 \end{equation}
-
-And finding the roots are trivial.\\ \\
+and finding the roots is trivial.\\ \\
 Finally, let
 
 \begin{equation}  \label{eq:ex5}
-	x^2 - \frac{1}{2}x - \frac{1}{2} = 0
+	x^2 - \frac{1}{2}x - \frac{1}{2} = 0.
 \end{equation}
 
-Using our technique from (\ref{eq:ex2}) we get $c=1*- \frac{1}{2}$ or $c= -1*\frac{1}{2}$.\\ We see that -1 added with $\frac{1}{2}$ gives $b=-\frac{1}{2}$.\\ 
+Using our technique from (\ref{eq:ex2}) we get $c=1\cdot- \frac{1}{2}$ or $c=-1\cdot\frac{1}{2}$.
+
+We see that $-1$ added with $\frac{1}{2}$ gives $b=-\frac{1}{2}$.
+
 Thus
 \begin{equation} \label{eq:ex51}
- (x-1)(x+\frac{1}{2}) = 0
+ (x-1)(x+\frac{1}{2}) = 0,
 \end{equation}
-And finding the roots are trivial.
+and finding the roots is trivial.
 
 \newpage
 
 \subsection{Exercises}
 
-Remember that in the cases where $a \neq 1$, the question regards \emph{what we can multiply in order to get $\frac{c}{a}$ and simultaneously add together to get $\frac{b}{a}$}.
-\\Additional interesting problems are given below
+Additional interesting problems are given below. Remember that in the cases where $a \neq 1$, the question regards \emph{what we can multiply in order to get $\frac{c}{a}$ and simultaneously add together to get $\frac{b}{a}$}.
+
 
 \begin{equation}
 	x^2 - 4 = 0
